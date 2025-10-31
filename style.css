@@ -1,0 +1,270 @@
+/* Variabel Warna */
+:root {
+    --dark-grey: #424242; /* Warna latar belakang utama */
+    --light-grey: #666666; /* Warna card atau elemen lain yang lebih terang */
+    --text-color: #ffffff; /* Warna teks utama */
+    --accent-color: #1a1a1a; /* Warna navbar/header */
+    --unity-logo-color: #cccccc; /* Warna ikon besar */
+}
+
+/* Gaya Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--dark-grey);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.main-bg {
+    background-color: var(--dark-grey);
+}
+
+.content-section {
+    padding: 100px 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- Navigasi Bar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+}
+
+.logo-placeholder img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Ini adalah placeholder untuk logo lingkaran hijau-biru */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    background-color: var(--dark-grey); /* Warna latar belakang saat aktif/hover */
+}
+
+/* --- Bagian Home --- */
+.hero-section {
+    text-align: center;
+    padding-top: 100px; /* Kompensasi untuk navbar */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 40px 0 20px 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.game-icon {
+    font-size: 8rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    background-color: var(--light-grey);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #777777;
+}
+
+/* --- Bagian About --- */
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-pic-placeholder img{
+    width: 250px;
+    height: 250px;
+    /* Placeholder untuk gambar profil awan/rumput */
+    background: linear-gradient(to bottom, #87CEEB 50%, #7CFC00 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Efek awan putih */
+    box-shadow: inset 0 0 0 10px white, 0 0 0 5px var(--dark-grey);
+}
+
+.about-text p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* --- Bagian Skills --- */
+.skills-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.unity-icon {
+    /* Menggunakan Font Awesome sebagai pengganti logo Unity untuk kemudahan */
+    font-size: 15rem;
+    color: var(--unity-logo-color);
+    transform: rotate(45deg); /* Memberikan kesan sudut logo */
+}
+
+.skills-list ul {
+    list-style: none;
+}
+
+.skills-list li {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* --- Bagian Work/Projects --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.project-card {
+    background-color: var(--light-grey);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.project-card:hover {
+    background-color: #777777;
+}
+
+.project-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* --- Bagian Contact --- */
+.contact-info {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.whatsapp-icon {
+    /* Untuk mendapatkan ikon WhatsApp yang lebih mirip dengan gambar */
+    font-size: 3.5rem; 
+    margin-top: -5px; /* Penyesuaian vertikal */
+}
+
+/* --- Media Queries (untuk tampilan dasar di layar kecil) --- */
+@media (max-width: 992px) {
+    .about-me-container,
+    .skills-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-top: 30px;
+    }
+
+    .unity-icon {
+        font-size: 10rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none; /* Sembunyikan menu di layar kecil, perlu JS untuk toggle */
+    }
+    
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .content-section {
+        padding: 50px 5%;
+    }
+}
